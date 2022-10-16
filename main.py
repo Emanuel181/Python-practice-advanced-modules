@@ -3,7 +3,9 @@ import shutil
 import send2trash
 import datetime
 
+
 print('Working with OS, shutil and send2trash modules')
+
 print('\n‣Hello!')
 print('\n‣I will create a file and I will show what can I do with it')
 print('\n‣Name of the file will be \'test.txt\' ')
