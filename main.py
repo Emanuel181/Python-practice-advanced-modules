@@ -101,3 +101,21 @@ datetime5 = datetime.datetime(2022, 4, 5, 21, 5, 6)
 print('\n‣', datetime5)
 
 print('That is all. Goodbye! ;)')
+
+
+shutil.unpack_archive('C:\\Users\\Emanuel\\Desktop\\unzip_me.zip', 'C:\\Users\Emanuel\\PycharmProjects\\pythonProject7', 'zip')
+
+pattern = r'\d{3}-\d{3}-\d{4}'
+results = []
+
+for folder, sub_folder, files in os.walk('C:\\Users\Emanuel\\PycharmProjects\\pythonProject7\\extracted_content'):
+    for file in files:
+        with open(folder + '\\' + file) as f:
+            found = re.findall(pattern, f.read())
+            if len(found) >= 1:
+                for number in found:
+                    results.append(number)
+
+
+print(results)
+
